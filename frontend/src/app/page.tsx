@@ -48,7 +48,7 @@ export default function Home() {
           <AboutArtist />
         </FlowSection>
 
-        <FlowSection aria-label="Tour and events" style={{ backgroundColor: "#101006", color: "#fff" }}>
+        <FlowSection aria-label="Tour and events" style={{ backgroundColor: "#CEF56A", color: "#000" }}>
           <TourEvents />
         </FlowSection>
 

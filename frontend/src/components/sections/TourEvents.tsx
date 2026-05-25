@@ -67,12 +67,9 @@ export default function TourEvents() {
     <section
       ref={sectionRef}
       id="tour"
-      className="snap-section relative flex flex-col items-center justify-center bg-transparent px-6 lg:px-16 py-16 overflow-hidden"
+      className="snap-section relative flex flex-col items-center justify-center px-6 lg:px-16 py-16 overflow-hidden"
+      style={{ backgroundColor: "#CEF56A" }}
     >
-      {/* Ambient BG */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 70% 50% at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 60%)",
-      }} />
 
       {/* Tour marquee BG */}
       <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 overflow-hidden pointer-events-none opacity-[0.025]">
