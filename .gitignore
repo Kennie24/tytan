@@ -1,0 +1,8 @@
+# Ignore backend directory as requested to only commit frontend
+backend/
+
+# Ignore system files
+.DS_Store
+
+# Ignore tool configurations
+.claude/
