@@ -9,11 +9,11 @@ import { fromTo, refreshScrollTrigger } from "@/lib/gsap-safe";
 gsap.registerPlugin(ScrollTrigger);
 
 const STATUS_MAP: Record<string, { label: string; color: string }> = {
-  "on-sale":      { label: "On Sale",          color: "#22c55e" },
-  "almost-sold":  { label: "Almost Sold Out",  color: "#f59e0b" },
-  "sold-out":     { label: "Sold Out",          color: "#ef4444" },
-  "coming-soon":  { label: "Coming Soon",       color: "#6b7280" },
-  "cancelled":    { label: "Cancelled",         color: "#6b7280" },
+  "on-sale":      { label: "On Sale",          color: "#166534" },
+  "almost-sold":  { label: "Almost Sold Out",  color: "#b45309" },
+  "sold-out":     { label: "Sold Out",          color: "#b91c1c" },
+  "coming-soon":  { label: "Coming Soon",       color: "#374151" },
+  "cancelled":    { label: "Cancelled",         color: "#4b5563" },
 };
 
 function formatEventDate(dateStr: string) {
@@ -72,8 +72,8 @@ export default function TourEvents() {
     >
 
       {/* Tour marquee BG */}
-      <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 overflow-hidden pointer-events-none opacity-[0.025]">
-        <div className="marquee-track font-display text-white" style={{ fontSize: "clamp(5rem,15vw,20rem)" }}>
+      <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 overflow-hidden pointer-events-none opacity-[0.02]">
+        <div className="marquee-track font-display text-black" style={{ fontSize: "clamp(5rem,15vw,20rem)" }}>
           {Array(3).fill("WORLD TOUR · ").map((t, i) => <span key={i}>{t}</span>)}
         </div>
       </div>
@@ -82,17 +82,17 @@ export default function TourEvents() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10">
           <div>
-            <p className="text-white/30 tracking-[0.4em] text-xs uppercase mb-3">Live Shows</p>
-            <h2 ref={titleRef} className="text-section-title font-display text-white opacity-0">
-              WORLD <span className="text-gold-gradient">TOUR</span>
+            <p className="text-black/50 tracking-[0.4em] text-xs uppercase mb-3">Live Shows</p>
+            <h2 ref={titleRef} className="text-section-title font-display text-black opacity-0">
+              WORLD <span className="text-black">TOUR</span>
             </h2>
-            <div className="section-divider mt-4 w-32" />
+            <div className="section-divider mt-4 w-32 bg-black/20" />
           </div>
           {!loading && events.length > 0 && (
             <div className="mt-4 lg:mt-0 px-5 py-3 rounded-xl"
-              style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)" }}>
-              <p className="text-gold text-sm font-medium">{events.length} Shows Announced</p>
-              <p className="text-white/30 text-xs mt-0.5">More dates to be confirmed</p>
+              style={{ background: "rgba(0,0,0,0.04)", border: "1px solid rgba(0,0,0,0.15)" }}>
+              <p className="text-black text-sm font-medium">{events.length} Shows Announced</p>
+              <p className="text-black/50 text-xs mt-0.5">More dates to be confirmed</p>
             </div>
           )}
         </div>
@@ -101,11 +101,11 @@ export default function TourEvents() {
         {loading ? (
           <div className="flex flex-col gap-0 animate-pulse">
             {[0,1,2,3,4].map(i => (
-              <div key={i} className="h-20 border-b border-white/5 bg-white/[0.02] rounded mb-1" />
+              <div key={i} className="h-20 border-b border-black/5 bg-black/[0.04] rounded mb-1" />
             ))}
           </div>
         ) : !events.length ? (
-          <p className="text-white/30 text-center py-12">No upcoming shows announced yet. Check back soon.</p>
+          <p className="text-black/50 text-center py-12">No upcoming shows announced yet. Check back soon.</p>
         ) : (
           <div className="flex flex-col">
             {events.map((event) => {
@@ -117,23 +117,23 @@ export default function TourEvents() {
                 <div
                   key={event.id}
                   className="event-row opacity-0 flex items-center gap-4 lg:gap-8 py-5 px-4 lg:px-6 group cursor-pointer rounded-lg transition-all duration-300"
-                  style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
+                  style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}
                 >
                   {/* Date */}
                   <div className="flex-shrink-0 text-center min-w-[3rem]">
-                    <p className="font-display text-2xl text-gold leading-none">{dayNum}</p>
-                    <p className="font-display text-sm text-white/30">{month}</p>
-                    <p className="text-white/20 text-[10px]">{year}</p>
+                    <p className="font-display text-2xl text-black leading-none">{dayNum}</p>
+                    <p className="font-display text-sm text-black/50">{month}</p>
+                    <p className="text-black/30 text-[10px]">{year}</p>
                   </div>
 
-                  <div className="w-px h-10 bg-white/10 flex-shrink-0 hidden lg:block" />
+                  <div className="w-px h-10 bg-black/10 flex-shrink-0 hidden lg:block" />
 
                   {/* Location */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display text-xl lg:text-2xl text-white group-hover:text-gold transition-colors tracking-wide">
+                    <h3 className="font-display text-xl lg:text-2xl text-black group-hover:text-black transition-colors tracking-wide">
                       {event.city}
                     </h3>
-                    <p className="text-white/40 text-sm truncate">
+                    <p className="text-black/60 text-sm truncate">
                       {event.venue} · {event.country}
                     </p>
                   </div>
@@ -141,13 +141,13 @@ export default function TourEvents() {
                   {/* Status badge */}
                   <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
                     <div className="w-2 h-2 rounded-full"
-                      style={{ background: status.color, boxShadow: `0 0 8px ${status.color}` }} />
-                    <span className="text-xs" style={{ color: status.color }}>{status.label}</span>
+                      style={{ background: status.color, boxShadow: `0 0 4px ${status.color}` }} />
+                    <span className="text-xs font-semibold" style={{ color: status.color }}>{status.label}</span>
                   </div>
 
                   {/* Price + CTA */}
                   <div className="flex items-center gap-3 flex-shrink-0">
-                    <span className="text-white/50 text-sm hidden sm:block">
+                    <span className="text-black/60 text-sm hidden sm:block font-medium">
                       {formatPrice(event.ticket_price)}
                     </span>
                     {canBuy && event.ticket_url ? (
@@ -156,6 +156,7 @@ export default function TourEvents() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-gold text-xs py-2 px-4"
+                        style={{ backgroundColor: "#000", color: "#fff" }}
                       >
                         Get Tickets
                       </a>
@@ -163,6 +164,7 @@ export default function TourEvents() {
                       <button
                         className="btn-outline-white text-xs py-2 px-4 opacity-50 cursor-not-allowed"
                         disabled
+                        style={{ borderColor: "rgba(0,0,0,0.2)", color: "rgba(0,0,0,0.6)" }}
                       >
                         {event.status === "sold-out" ? "Sold Out" :
                          event.status === "cancelled" ? "Cancelled" : "Notify Me"}
