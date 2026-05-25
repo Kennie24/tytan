@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Guitar, Music2, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -15,9 +15,7 @@ export default function HeroSection() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const scrollIndRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
-  const album1Ref = useRef<HTMLDivElement>(null);
-  const album2Ref = useRef<HTMLDivElement>(null);
-  const album3Ref = useRef<HTMLDivElement>(null);
+
   const particlesRef = useRef<HTMLCanvasElement>(null);
 
   // Particles
@@ -154,23 +152,7 @@ export default function HeroSection() {
         );
       }
 
-      // Floating albums
-      const albums = [album1Ref.current, album2Ref.current, album3Ref.current];
-      albums.forEach((el, i) => {
-        if (!el) return;
-        tl.fromTo(
-          el,
-          { opacity: 0, scale: 0.7, y: 60 },
-          {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 1,
-            ease: "back.out(1.7)",
-          },
-          0.8 + i * 0.15
-        );
-      });
+
 
       // Scroll-driven parallax on background
       if (bgRef.current) {
@@ -259,78 +241,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Floating album artworks */}
-      {/* Album 1 - left */}
-      <div
-        ref={album1Ref}
-        className="absolute float-1 opacity-0"
-        style={{ left: "4%", top: "20%", zIndex: 2 }}
-      >
-        <div
-          className="w-32 h-32 lg:w-44 lg:h-44 rounded-xl shadow-2xl album-card"
-          style={{
-            background:
-              "linear-gradient(135deg, #1a0a3e 0%, #0d0620 50%, #200830 100%)",
-            boxShadow:
-              "0 30px 80px rgba(29,185,84,0.3), 0 0 0 1px rgba(29,185,84,0.1)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "3rem",
-          }}
-        >
-          <Music2 size={54} strokeWidth={1.25} className="text-green-200/80" />
-        </div>
-      </div>
 
-      {/* Album 2 - right top */}
-      <div
-        ref={album2Ref}
-        className="absolute float-2 opacity-0"
-        style={{ right: "5%", top: "15%", zIndex: 2 }}
-      >
-        <div
-          className="w-28 h-28 lg:w-36 lg:h-36 rounded-xl shadow-2xl album-card"
-          style={{
-            background:
-              "linear-gradient(135deg, #3a1a00 0%, #1a0a00 50%, #2a1500 100%)",
-            boxShadow:
-              "0 30px 80px rgba(255,255,255,0.2), 0 0 0 1px rgba(255,255,255,0.1)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "2.5rem",
-          }}
-        >
-          <Guitar size={46} strokeWidth={1.25} className="text-gold/85" />
-        </div>
-        <p className="text-white/30 text-xs mt-2 text-center tracking-widest uppercase">
-          Rise of Tytan
-        </p>
-      </div>
-
-      {/* Album 3 - right bottom */}
-      <div
-        ref={album3Ref}
-        className="absolute float-3 opacity-0"
-        style={{ right: "8%", bottom: "25%", zIndex: 2 }}
-      >
-        {/* Vinyl */}
-        <div
-          className="vinyl-spin w-20 h-20 lg:w-28 lg:h-28 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle at 50% 50%, #333 0%, #111 30%, #000 45%, #111 50%, #000 100%)",
-            boxShadow: "0 0 40px rgba(59,130,246,0.3)",
-            border: "2px solid rgba(255,255,255,0.05)",
-          }}
-        >
-          <div
-            className="absolute inset-0 m-auto w-4 h-4 rounded-full"
-            style={{ background: "var(--gold)", margin: "auto", top: 0, bottom: 0, left: 0, right: 0, position: "absolute" }}
-          />
-        </div>
-      </div>
 
       {/* Main content */}
       <div
