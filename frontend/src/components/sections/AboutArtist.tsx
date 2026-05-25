@@ -67,7 +67,7 @@ export default function AboutArtist() {
     <section
       ref={sectionRef}
       id="about"
-      className="snap-section relative flex items-center justify-center bg-transparent overflow-hidden"
+      className="snap-section relative flex items-center justify-center bg-black overflow-hidden"
     >
       {/* Giant BG name */}
       <div
@@ -85,15 +85,7 @@ export default function AboutArtist() {
         TYTAN TAKUBA
       </div>
 
-      {/* Ambient */}
-      <div
-        className="ambient-blob absolute"
-        style={{
-          width: 700, height: 700,
-          background: "radial-gradient(circle, #FFFFFF, transparent)",
-          top: "-20%", right: "-20%", opacity: 0.06,
-        }}
-      />
+      {/* Ambient - Removed to maintain pure black background */}
 
       <div className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-16 z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -102,8 +94,8 @@ export default function AboutArtist() {
             <div
               className="aspect-[3/4] rounded-2xl overflow-hidden relative bg-black"
               style={{
-                border: "1px solid rgba(255,255,255,0.06)",
-                boxShadow: "0 40px 100px rgba(139,92,246,0.15)",
+                border: "none",
+                boxShadow: "none",
               }}
             >
               <img
@@ -111,8 +103,7 @@ export default function AboutArtist() {
                 alt="Tytan Takuba verified artist portrait"
                 className="absolute inset-0 h-full w-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/90" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_45%_20%,rgba(255,255,255,0.08),transparent_45%)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/95" />
 
               {/* Floating badge */}
               <div
@@ -127,7 +118,7 @@ export default function AboutArtist() {
               {/* Bottom info */}
               <div
                 className="absolute bottom-0 left-0 right-0 p-6"
-                style={{ background: "linear-gradient(to top, rgba(0,0,0,0.9), transparent)" }}
+                style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95), transparent)" }}
               >
                 <h3 className="font-display text-3xl text-white">TYTAN TAKUBA</h3>
                 <p className="text-white/40 text-xs tracking-widest mt-1">
