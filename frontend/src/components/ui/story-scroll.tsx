@@ -28,6 +28,7 @@ export const FlowSection: React.FC<FlowSectionProps> = ({
     data-flow-section
     aria-label={ariaLabel}
     className={cx('relative min-h-screen w-full overflow-hidden', className)}
+    style={style}
   >
     <div
       data-flow-inner

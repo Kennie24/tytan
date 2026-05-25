@@ -86,7 +86,8 @@ export default function AlbumsStore() {
     <section
       ref={sectionRef}
       id="store"
-      className="snap-section relative flex flex-col items-center justify-center bg-transparent px-6 lg:px-16 py-16 overflow-hidden"
+      className="snap-section relative flex flex-col items-center justify-center px-6 lg:px-16 py-16 overflow-hidden"
+      style={{ backgroundColor: "#763895" }}
     >
 
 
