@@ -37,7 +37,10 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-black text-white overflow-x-hidden antialiased">
+      <body
+        className="bg-black text-white overflow-x-hidden antialiased"
+        suppressHydrationWarning
+      >
         <LoadingScreen />
         <LenisProvider>{children}</LenisProvider>
       </body>
