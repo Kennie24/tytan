@@ -98,7 +98,7 @@ export default function AboutArtist() {
       <div className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-16 z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: artist portrait */}
-          <div className="about-reveal opacity-0 relative max-w-sm mx-auto lg:mx-0">
+          <div className="about-reveal opacity-0 relative w-full max-w-sm lg:max-w-md xl:max-w-lg mx-auto lg:mx-0">
             <div
               className="aspect-[3/4] rounded-2xl overflow-hidden relative bg-black"
               style={{

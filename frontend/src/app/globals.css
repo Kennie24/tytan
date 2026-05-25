@@ -559,3 +559,29 @@ html {
 .video-thumb:hover::after { opacity: 1; }
 .video-thumb img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
 .video-thumb:hover img { transform: scale(1.06); }
+
+/* ── Wide Screen Fluid Scale ────────────────────────── */
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px; /* Scales up all rem-based typography and spacing by 12.5% */
+  }
+  
+  /* Make standard Tailwind container max-widths full-width on wide screens */
+  .max-w-\[1200px\],
+  .max-w-\[1400px\],
+  .max-w-\[1600px\] {
+    max-width: 92vw !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px; /* Scales up all rem-based typography and spacing by 25% */
+  }
+  
+  .max-w-\[1200px\],
+  .max-w-\[1400px\],
+  .max-w-\[1600px\] {
+    max-width: 95vw !important;
+  }
+}

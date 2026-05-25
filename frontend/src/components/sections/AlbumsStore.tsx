@@ -132,7 +132,7 @@ export default function AlbumsStore() {
         )}
 
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 animate-pulse">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 animate-pulse">
             {[0,1,2,3].map(i => <div key={i} className="rounded-xl bg-white/5 h-64" />)}
           </div>
         ) : !filtered.length ? (
@@ -140,7 +140,7 @@ export default function AlbumsStore() {
             No {filter !== "all" ? filter + "s" : "releases"} available yet.
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filtered.map((album) => {
               const accent  = TYPE_ACCENTS[album.type] ?? "#1DB954";
               const inCart  = cart.some((c) => c.id === album.id);
