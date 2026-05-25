@@ -111,10 +111,7 @@ export default function Footer() {
             <a className="social-pill" href="#">X</a>
             <a className="social-pill" href="#">Youtube</a>
           </div>
-          {/* Credits */}
-          <div className="text-xs text-gray-500">
-            Site by <a className="text-white hover:underline" href="#">AncoraThemes</a>
-          </div>
+
         </div>
       </div>
     </footer>
