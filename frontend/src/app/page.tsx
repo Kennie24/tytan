@@ -36,7 +36,7 @@ export default function Home() {
           <MusicPlayer />
         </FlowSection>
 
-        <FlowSection aria-label="Albums store" style={{ backgroundColor: "#151006", color: "#fff" }}>
+        <FlowSection aria-label="Albums store" style={{ backgroundColor: "#763895", color: "#fff" }}>
           <AlbumsStore />
         </FlowSection>
 

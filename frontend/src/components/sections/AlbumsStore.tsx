@@ -88,10 +88,7 @@ export default function AlbumsStore() {
       id="store"
       className="snap-section relative flex flex-col items-center justify-center bg-transparent px-6 lg:px-16 py-16 overflow-hidden"
     >
-      {/* Ambient BG */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255,255,255,0.06) 0%, transparent 60%)",
-      }} />
+
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Header */}
