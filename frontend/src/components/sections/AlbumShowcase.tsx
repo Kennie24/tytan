@@ -89,12 +89,9 @@ export default function AlbumShowcase() {
     <section
       ref={sectionRef}
       id="albums"
-      className="snap-section relative flex flex-col items-center justify-center bg-transparent px-6 lg:px-16 py-16 overflow-hidden"
+      className="snap-section relative flex flex-col items-center justify-center px-6 lg:px-16 py-16 overflow-hidden"
+      style={{ backgroundColor: "#EB1F31" }}
     >
-      {/* Ambient BG */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(29,185,84,0.08) 0%, transparent 60%)",
-      }} />
 
       {/* Header */}
       <div className="w-full max-w-[1400px] mx-auto mb-10">

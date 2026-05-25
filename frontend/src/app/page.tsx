@@ -28,7 +28,7 @@ export default function Home() {
           <HeroSection />
         </FlowSection>
 
-        <FlowSection aria-label="Latest album showcase" style={{ backgroundColor: "#120816", color: "#fff" }}>
+        <FlowSection aria-label="Latest album showcase" style={{ backgroundColor: "#EB1F31", color: "#fff" }}>
           <AlbumShowcase />
         </FlowSection>
 
