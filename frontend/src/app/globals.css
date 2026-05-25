@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800;900&display=swap');
 @import "tailwindcss";
 
 /* =====================================================
@@ -14,6 +15,9 @@
   --color-electric-blue: #3B82F6;
   --color-deep-navy: #0A0F2E;
   --color-charcoal: #1A1A2E;
+  --color-brand-dark: #0a0a0a;
+  --color-brand-grey: #7a7a7a;
+  --color-brand-border: #2a2a2a;
 }
 
 :root {
@@ -584,4 +588,40 @@ html {
   .max-w-\[1600px\] {
     max-width: 95vw !important;
   }
+}
+
+/* ── Moonlight Footer Custom Styles ─────────────────── */
+.moonlight-text {
+  font-family: 'Outfit', sans-serif;
+  /* Background clipping for the grainy texture effect */
+  background: url('https://www.transparenttextures.com/patterns/natural-paper.png'), 
+              linear-gradient(to bottom, #fdfdfd 0%, #d1d1d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  line-height: 0.8;
+}
+
+.social-pill {
+  border: 1px solid #333;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.social-pill:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer-link {
+  color: #999;
+  transition: color 0.2s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: #fff;
 }

@@ -214,16 +214,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Footer bar */}
-        <div className="mt-12 pt-6 border-t border-white/05 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/20 text-xs">
-          <p className="font-display text-gold text-lg tracking-widest">TYTAN TAKUBA</p>
-          <p>© {new Date().getFullYear()} Tytan Takuba. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white/50 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white/50 transition-colors">Terms</a>
-            <a href="#" className="hover:text-white/50 transition-colors">Cookies</a>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import TourEvents from "@/components/sections/TourEvents";
 import FanClub from "@/components/sections/FanClub";
 import MerchStore from "@/components/sections/MerchStore";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
 import FlowArt, { FlowSection } from "@/components/ui/story-scroll";
 
 export default function Home() {
@@ -61,6 +62,10 @@ export default function Home() {
 
         <FlowSection aria-label="Contact and booking" style={{ backgroundColor: "#16060E", color: "#fff" }}>
           <Contact />
+        </FlowSection>
+
+        <FlowSection aria-label="Footer" style={{ backgroundColor: "#000000", color: "#fff" }}>
+          <Footer />
         </FlowSection>
       </FlowArt>
     </>
